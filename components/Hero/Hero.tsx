@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as ScrollLink } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
@@ -30,6 +31,16 @@ const Hero = () => {
               Freelance Software Engineer, Fullstack developer, & Data Miner. I
               create seamless web experiences the meets client expectation.
             </span>
+            <div className="flex items-center justify-start gap-5">
+              <ScrollLink
+                to="projects"
+                spy={true}
+                smooth={true}
+                className="text-base font-normal text-white cursor-pointer hover:text-blue-500 hidden md:flex"
+              >
+                Projects
+              </ScrollLink>
+            </div>
           </div>
           <div className="tab:flex-1 w-full relative flex items-center justify-center h-full md:overflow-hidden">
             <div className="w-full bg-[#FA5B0F] md:absolute h-[416px] rounded-full flex items-center justify-center overflow-hidden">

@@ -1,4 +1,4 @@
-import React, { MouseEvent, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { MdClose } from "react-icons/md";
 
