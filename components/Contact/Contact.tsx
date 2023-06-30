@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsTwitter, BsInstagram, BsLinkedin, BsSend } from "react-icons/bs";
 import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { useForm } from "@formspree/react";
@@ -16,15 +16,15 @@ interface FormValues {
 const Contact = () => {
   const Icons = [
     {
-      href: "https://twitter.com/",
+      href: "https://twitter.com/AsiughuE",
       icon: BsTwitter,
     },
     {
-      href: "https://web.instagram.com/",
+      href: "https://www.instagram.com/giftedvibez20/",
       icon: BsInstagram,
     },
     {
-      href: "https://youtube.com/",
+      href: "https://www.linkedin.com/in/efe-gift-109120241",
       icon: BsLinkedin,
     },
   ];
@@ -63,6 +63,18 @@ const Contact = () => {
       autoClose: 1500,
     });
   }
+
+  const NameValuesCheck = values.Name.length > 0;
+  const EmailValuesCheck = values.Email.length > 0;
+  const SubjectValuesCheck = values.Subject.length > 0;
+  const MessageValuesCheck = values.Message.length > 0;
+
+  const btnDisabled =
+    !NameValuesCheck ||
+    !EmailValuesCheck ||
+    !SubjectValuesCheck ||
+    !MessageValuesCheck ||
+    isSubmitting;
 
   return (
     <section id="contact" className="py-10 w-full">
@@ -149,6 +161,14 @@ const Contact = () => {
                     : "border-slate-700"
                 } w-full h-52 p-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal resize-none`}
               ></textarea>
+              <button
+                disabled={btnDisabled}
+                type="submit"
+                className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-fit bg-secondary py-2 px-8 rounded-lg transition-all duration-300 outline-none disabled:cursor-not-allowed disabled:bg-secondary/60 disabled:border-secondary/60"
+              >
+                <span>Send Message</span>
+                <BsSend />
+              </button>
             </form>
           </div>
         </div>
