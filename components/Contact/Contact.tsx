@@ -97,7 +97,19 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="w-full flex flex-col items-start"
             >
-              <input type="text" />
+              <input
+                type="text"
+                placeholder="Name"
+                value={values.Name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                name="Name"
+                className={`${
+                  errors.Name && touched.Name
+                    ? "border-red-500"
+                    : "border-slate-700"
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+              />
             </form>
           </div>
         </div>
