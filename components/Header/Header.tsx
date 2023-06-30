@@ -8,8 +8,10 @@ const Header = () => {
         to="mining"
         spy={true}
         smooth={true}
-        className="flex items-center gap-2 font-general text-lg font-normal text-dark cursor-pointer hover:border-b-[3px] hover:border-success h-full"
-      >Home</ScrollLink>
+        className="text-base font-normal text-white cursor-pointer hover:text-blue-500"
+      >
+        Home
+      </ScrollLink>
     </header>
   );
 };
