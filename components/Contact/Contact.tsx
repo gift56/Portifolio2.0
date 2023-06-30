@@ -3,7 +3,9 @@ import React from "react";
 const Contact = () => {
   return (
     <section id="contact" className="py-10 w-full">
-      <div className="contianer">sdn</div>
+      <div className="container">
+        <div></div>
+      </div>
     </section>
   );
 };
