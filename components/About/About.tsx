@@ -14,6 +14,16 @@ const About = () => {
             Web Development and advance i have core understanding of advance UI
             design principles. Here are the major skills i do dominate.
           </p>
+          <div className="flex items-start justify-start gap-5 flex-col md:flex-row md:items-center">
+            <span className="text-3xl md:text-4xl lg:text-6xl font-semibold text-blue-500">
+              4+
+            </span>
+            <span className="text-lg md:text-xl font-medium">
+              Years of experience. Specialised in building web applications, while ensuring
+              a seamless
+              <br className="hidden lg:block" /> web performance and user experience.
+            </span>
+          </div>
         </div>
       </div>
     </section>
