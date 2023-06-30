@@ -35,7 +35,22 @@ const Projects = () => {
             I have worked on many projects over the course of being a Web
             Developer, here are a few of my live, real-world projects
           </p>
-          <div className="w-full mt-5"></div>
+          <div className="w-full mt-5">
+            <Swiper
+              slidesPerView={screen}
+              spaceBetween={30}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Autoplay, Pagination]}
+            >
+                
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>
