@@ -6,6 +6,13 @@ import { toast } from "react-toastify";
 import { useForm } from "@formspree/react";
 import { contactSchema } from "@/schema";
 
+interface FormValues {
+  Name: string;
+  Message: string;
+  Email: string;
+  Subject: string;
+}
+
 const Contact = () => {
   const Icons = [
     {
@@ -22,13 +29,13 @@ const Contact = () => {
     },
   ];
 
-  const [state, submitForm = handleSubmit] = useForm("xaygwalq");
-  const initialValues = {
-    Full_Name: "",
+  const initialValues: FormValues = {
+    Name: "",
     Message: "",
     Email: "",
+    Subject: "",
   };
-  const onSubmit = async (payload, actions) => {
+  const onSubmit = async (payload: FormValues | any, actions: any) => {
     submitForm(payload);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     actions.resetForm();
@@ -47,6 +54,8 @@ const Contact = () => {
     validationSchema: contactSchema,
     onSubmit,
   });
+
+  const [state, submitForm = handleSubmit] = useForm("xaygwalq");
 
   return (
     <section id="contact" className="py-10 w-full">
@@ -77,7 +86,9 @@ const Contact = () => {
           </div>
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
             <h2 className="text-2xl font-semibold">Send me a message</h2>
-            <form className="w-full flex flex-col items-start"></form>
+            <form onSubmit={handleSubmit} className="w-full flex flex-col items-start">
+              <input type="text" />
+            </form>
           </div>
         </div>
       </div>
