@@ -7,19 +7,38 @@ const About = () => {
   const data = [
     {
       icon: TfiRulerPencil,
-      title: "UI & UX DESIGNING",
+      title: (
+        <span>
+          UI & UX <br /> DESIGNING
+        </span>
+      ),
     },
     {
       icon: FaLaptopCode,
-      title: "WEB DEVELOPMENT",
+      title: (
+        <span>
+          WEB
+          <br /> DEVELOPMENT
+        </span>
+      ),
     },
     {
       icon: TbBrandJavascript,
-      title: "JAVASCRIPT DEVELOPMENT",
+      title: (
+        <span>
+          JAVASCRIPT
+          <br /> DEVELOPMENT
+        </span>
+      ),
     },
     {
       icon: FaReact,
-      title: "REACT DEVELOPMENT",
+      title: (
+        <span>
+          REACT
+          <br /> DEVELOPMENT
+        </span>
+      ),
     },
   ];
   return (
@@ -50,11 +69,14 @@ const About = () => {
             {data.map((item) => (
               <div
                 key={item.title}
-                className="w-full h-[254px] bg-slate-700 transition-all duration-300 hover:bg-secondary rounded flex flex-col items-start justify-end p-4"
+                className="w-full h-[254px] bg-slate-700 transition-all duration-300 hover:bg-secondary rounded flex flex-col items-start justify-end gap-4 p-4"
               >
                 <span>
-                  <item.icon />
+                  <item.icon size={40} />
                 </span>
+                <h2 className="text-base font-semibold md:text-2xl">
+                  {item.title}
+                </h2>
               </div>
             ))}
           </div>
