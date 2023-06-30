@@ -116,12 +116,11 @@ const Contact = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 name="Name"
-                id="Name"
                 className={`${
                   errors.Name && touched.Name
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal focus:border-secondary`}
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
               />
               <input
                 type="text"
@@ -134,7 +133,7 @@ const Contact = () => {
                   errors.Email && touched.Email
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal focus:border-secondary`}
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
               />
               <input
                 type="text"
@@ -147,7 +146,7 @@ const Contact = () => {
                   errors.Subject && touched.Subject
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal focus:border-secondary`}
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
               />
               <textarea
                 name="Message"
@@ -160,7 +159,7 @@ const Contact = () => {
                   errors.Subject && touched.Subject
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-52 p-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal resize-none focus:border-secondary`}
+                } w-full h-52 p-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal resize-none`}
               ></textarea>
               <button
                 disabled={btnDisabled}
