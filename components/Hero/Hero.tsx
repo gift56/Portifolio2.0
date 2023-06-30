@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
@@ -10,7 +11,7 @@ const Hero = () => {
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
             <h1 className="text-2xl font-semibold md:text-3xl">
               Hello, my name is{" "}
-              <i className="font-styleFont text-[#fa5b0f]">Efe Asieghwu Gift</i>
+              <i className="font-styleFont text-secondary">Efe Asieghwu Gift</i>
             </h1>
             <TypeAnimation
               sequence={[
@@ -36,14 +37,21 @@ const Hero = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                className="text-base font-normal text-white cursor-pointer hover:text-blue-500 hidden md:flex"
+                className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-fit bg-secondary py-2 px-8 rounded-lg transition-all duration-300"
               >
                 Projects
               </ScrollLink>
+              <Link
+                href="/CvFile/myCv.pdf"
+                download
+                className="text-base font-normal text-white cursor-pointer hover:bg-secondary border-secondary border flex items-center justify-center gap-3 w-fit bg-transparent py-2 px-8 rounded-lg transition-all duration-300"
+              >
+                Download CV
+              </Link>
             </div>
           </div>
           <div className="tab:flex-1 w-full relative flex items-center justify-center h-full md:overflow-hidden">
-            <div className="w-full bg-[#FA5B0F] md:absolute h-[416px] rounded-full flex items-center justify-center overflow-hidden">
+            <div className="w-full bg-secondary md:absolute h-[416px] rounded-full flex items-center justify-center overflow-hidden">
               <img
                 src="/img/heroImg.png"
                 alt="hero_image"

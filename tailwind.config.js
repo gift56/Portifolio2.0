@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         bodyBg: "#0F103F",
+        secondary: "#fa5b0f",
       },
       backgroundImage: {
         linearBg: "linear-gradient(169deg, #C961DE 0%, #2954A3 100%)",
