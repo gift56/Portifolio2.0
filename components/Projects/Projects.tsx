@@ -1,6 +1,29 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import Link from "next/link";
 
 const Projects = () => {
+  const [screen, setScreen] = useState<HTMLDivElement | any>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      const newScreen = screenWidth <= 714 ? 1 : screenWidth <= 940 ? 2 : 3;
+      setScreen(newScreen);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section id="projects" className="py-10 w-full">
       <div className="container">
@@ -12,7 +35,7 @@ const Projects = () => {
             I have worked on many projects over the course of being a Web
             Developer, here are a few of my live, real-world projects
           </p>
-          <div className=""></div>
+          <div className="w-full mt-5"></div>
         </div>
       </div>
     </section>
