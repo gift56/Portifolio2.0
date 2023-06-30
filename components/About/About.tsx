@@ -66,9 +66,9 @@ const About = () => {
             </span>
           </div>
           <div className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.map((item) => (
+            {data.map((item, i) => (
               <div
-                key={item.title}
+                key={i}
                 className="w-full h-[254px] bg-slate-700 transition-all duration-300 hover:bg-secondary rounded flex flex-col items-start justify-end gap-4 p-4"
               >
                 <span>
