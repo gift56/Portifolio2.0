@@ -1,6 +1,10 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { useFormik } from "formik";
+import { toast } from "react-toastify";
+import { useForm } from "@formspree/react";
+import { contactSchema } from "@/schema";
 
 const Contact = () => {
   const Icons = [
@@ -17,6 +21,32 @@ const Contact = () => {
       icon: BsLinkedin,
     },
   ];
+
+  const [state, submitForm = handleSubmit] = useForm("xaygwalq");
+  const initialValues = {
+    Full_Name: "",
+    Message: "",
+    Email: "",
+  };
+  const onSubmit = async (payload, actions) => {
+    submitForm(payload);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+  };
+
+  const {
+    handleChange,
+    values,
+    handleBlur,
+    handleSubmit,
+    isSubmitting,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues,
+    validationSchema: contactSchema,
+    onSubmit,
+  });
 
   return (
     <section id="contact" className="py-10 w-full">
@@ -47,9 +77,7 @@ const Contact = () => {
           </div>
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
             <h2 className="text-2xl font-semibold">Send me a message</h2>
-            <form className="w-full flex flex-col items-start">
-                
-            </form>
+            <form className="w-full flex flex-col items-start"></form>
           </div>
         </div>
       </div>
