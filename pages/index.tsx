@@ -1,6 +1,6 @@
 import React from "react";
 import LandingpageLayout from "@/layouts/LandingpageLayout";
-import { About, Hero, Projects } from "@/components";
+import { About, Contact, Hero, Projects } from "@/components";
 
 const Homepage = () => {
   return (
@@ -8,6 +8,7 @@ const Homepage = () => {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </LandingpageLayout>
   );
 };
