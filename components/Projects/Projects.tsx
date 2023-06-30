@@ -92,7 +92,26 @@ const Projects = () => {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-            ></Swiper>
+            >
+              {data.map((item) => (
+                <SwiperSlide
+                  key={item.desc}
+                  className="w-full p-6 flex flex-col items-start justify-start bg-[#31313F] rounded-xl shadow-cardShad !h-[450px] mb-10"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-[190px] w-full"
+                  />
+                  <div className="flex items-center justify-start gap-3 mt-4">
+                    <h2 className="text-xl font-semibold text-secondary tab:text-2xl">
+                      {item.title}
+                    </h2>
+                    <p className="text-sm font-medium md:text-base">{item.desc}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
