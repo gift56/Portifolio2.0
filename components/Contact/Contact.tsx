@@ -1,6 +1,27 @@
+import Link from "next/link";
 import React from "react";
+import { BsTwitter } from "react-icons/bs";
 
 const Contact = () => {
+  const Icons = [
+    {
+      href: "https://twitter.com/",
+      icon: <BsTwitter />,
+    },
+    {
+      href: "https://web.telegram.com/",
+      icon: "/icons/telegramIcon.svg",
+    },
+    {
+      href: "https://youtube.com/",
+      icon: "/icons/youtubeIcon.svg",
+    },
+    {
+      href: "https://web.facebook.com/",
+      icon: "/icons/facebookIcon.svg",
+    },
+  ];
+
   return (
     <section id="contact" className="py-10 w-full">
       <div className="container">
@@ -14,6 +35,17 @@ const Contact = () => {
               call, send me an email . Follow me in social media or simply
               complete the enquiry form.
             </p>
+            <div className="flex items-center justify-start gap-4 flex-wrap lg:flex-none">
+              {Icons.map((item, i) => (
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  key={i}
+                  rel="noreferrer noopener"
+                  className="w-12 h-12 shadow-footerShad flex items-center justify-center bg-[#ffffff1a] rounded-md backdrop-blur-sm border border-[#ffffff1a]"
+                ></Link>
+              ))}
+            </div>
           </div>
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4"></div>
         </div>
