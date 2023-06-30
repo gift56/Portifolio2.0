@@ -12,6 +12,7 @@ const Projects = () => {
             I have worked on many projects over the course of being a Web
             Developer, here are a few of my live, real-world projects
           </p>
+          <div className=""></div>
         </div>
       </div>
     </section>
