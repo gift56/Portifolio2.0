@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         bodyBg: "#0F103F",
         secondary: "#fa5b0f",
+        primary: "#1C1C65",
       },
       backgroundImage: {
         linearBg: "linear-gradient(169deg, #C961DE 0%, #2954A3 100%)",
