@@ -74,7 +74,7 @@ const About = () => {
                 <span>
                   <item.icon size={40} />
                 </span>
-                <h2 className="text-base font-semibold md:text-2xl">
+                <h2 className="font-semibold text-2xl">
                   {item.title}
                 </h2>
               </div>
