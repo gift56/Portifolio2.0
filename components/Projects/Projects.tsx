@@ -101,13 +101,33 @@ const Projects = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-[190px] w-full"
+                    className="h-[190px] w-full rounded-md"
                   />
-                  <div className="flex items-center justify-start gap-3 mt-4">
+                  <div className="flex items-start justify-start flex-col gap-3 mt-4">
                     <h2 className="text-xl font-semibold text-secondary tab:text-2xl">
                       {item.title}
                     </h2>
-                    <p className="text-sm font-medium md:text-base">{item.desc}</p>
+                    <p className="text-sm font-medium md:text-base">
+                      {item.desc}
+                    </p>
+                    <div className="flex items-center justify-center gap-4 w-full">
+                      <Link
+                        href={item.liveUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-fit bg-secondary py-2 px-8 rounded-lg transition-all duration-300"
+                      >
+                        View Live
+                      </Link>
+                      <Link
+                        href={item.repo}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="text-base font-normal text-white cursor-pointer hover:bg-secondary border-secondary border flex items-center justify-center gap-3 w-[50%] bg-transparent py-2 px-4 rounded-lg transition-all duration-300"
+                      >
+                        Github Repo
+                      </Link>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
