@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         styleFont: "'Clicker Script', cursive",
       },
+      screens: {
+        tab: "900px",
+      },
     },
   },
   plugins: [],
