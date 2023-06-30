@@ -17,6 +17,9 @@ module.exports = {
       boxShadow: {
         btnShad: "0px 10px 20px 0px rgba(8, 12, 33, 0.15)",
       },
+      fontFamily: {
+        styleFont: "'Clicker Script', cursive",
+      },
     },
   },
   plugins: [],
