@@ -1,8 +1,9 @@
 import React from "react";
+import LandingpageLayout from "@/layouts/LandingpageLayout";
 
 const Homepage = () => {
   return (
-    <div>
+    <LandingpageLayout pageTitle="I create seamless web experiences for end-users">
       {/* <Image
         src="/vercel.svg"
         alt="Vercel Logo"
@@ -12,8 +13,7 @@ const Homepage = () => {
         priority
       /> */}
       Homepage
-      
-    </div>
+    </LandingpageLayout>
   );
 };
 
