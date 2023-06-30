@@ -6,15 +6,15 @@ const Contact = () => {
   const Icons = [
     {
       href: "https://twitter.com/",
-      icon: <BsTwitter />,
+      icon: BsTwitter,
     },
     {
       href: "https://web.instagram.com/",
-      icon: <BsInstagram />,
+      icon: BsInstagram,
     },
     {
       href: "https://youtube.com/",
-      icon: <BsLinkedin />,
+      icon: BsLinkedin,
     },
   ];
 
@@ -38,8 +38,10 @@ const Contact = () => {
                   target="_blank"
                   key={i}
                   rel="noreferrer noopener"
-                  className="w-12 h-12 shadow-footerShad flex items-center justify-center bg-[#ffffff1a] rounded-md backdrop-blur-sm border border-[#ffffff1a]"
-                ></Link>
+                  className="w-12 h-12 flex items-center justify-center bg-[#ffffff1a] rounded-md backdrop-blur-sm border border-[#ffffff1a]"
+                >
+                  <item.icon size={20} />
+                </Link>
               ))}
             </div>
           </div>
