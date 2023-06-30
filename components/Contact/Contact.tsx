@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { BsTwitter } from "react-icons/bs";
+import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const Contact = () => {
   const Icons = [
@@ -9,16 +9,12 @@ const Contact = () => {
       icon: <BsTwitter />,
     },
     {
-      href: "https://web.telegram.com/",
-      icon: "/icons/telegramIcon.svg",
+      href: "https://web.instagram.com/",
+      icon: <BsInstagram />,
     },
     {
       href: "https://youtube.com/",
-      icon: "/icons/youtubeIcon.svg",
-    },
-    {
-      href: "https://web.facebook.com/",
-      icon: "/icons/facebookIcon.svg",
+      icon: <BsLinkedin />,
     },
   ];
 
