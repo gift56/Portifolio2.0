@@ -47,7 +47,9 @@ const Contact = () => {
           </div>
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
             <h2 className="text-2xl font-semibold">Send me a message</h2>
-            
+            <form className="w-full flex flex-col items-start">
+                
+            </form>
           </div>
         </div>
       </div>
