@@ -7,7 +7,7 @@ const Header = () => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent<Element, MouseEvent>) => {
+    const handleClickOutside: EventListener = (event) => {
       if (
         modalRef.current &&
         !modalRef.current.contains(event.target as Node)
