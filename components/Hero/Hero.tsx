@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="py-10 w-full xl:h-[90vh] xl:pt-0">
+    <section id="home" className="py-10 w-full xl:h-[90vh] xl:pt-0">
       <div className="container h-full">
         <div className="w-full flex flex-col items-center justify-center tab:flex-row gap-10 h-full">
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
