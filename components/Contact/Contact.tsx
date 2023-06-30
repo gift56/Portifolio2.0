@@ -96,9 +96,9 @@ const Contact = () => {
                   target="_blank"
                   key={i}
                   rel="noreferrer noopener"
-                  className="w-12 h-12 flex items-center justify-center bg-[#ffffff1a] rounded-md backdrop-blur-sm border border-[#ffffff1a]"
+                  className="w-12 h-12 flex items-center justify-center bg-[#ffffff1a] rounded-md backdrop-blur-sm border border-[#ffffff1a] hover:bg-secondary hover:text-white hover:origin-bottom transition-all duration-300"
                 >
-                  <item.icon size={20} />
+                  <item.icon size={20} className="hover:text-white" />
                 </Link>
               ))}
             </div>
@@ -116,11 +116,12 @@ const Contact = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 name="Name"
+                id="Name"
                 className={`${
                   errors.Name && touched.Name
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal focus:border-secondary`}
               />
               <input
                 type="text"
@@ -133,7 +134,7 @@ const Contact = () => {
                   errors.Email && touched.Email
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal focus:border-secondary`}
               />
               <input
                 type="text"
@@ -146,7 +147,7 @@ const Contact = () => {
                   errors.Subject && touched.Subject
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal focus:border-secondary`}
               />
               <textarea
                 name="Message"
@@ -159,7 +160,7 @@ const Contact = () => {
                   errors.Subject && touched.Subject
                     ? "border-red-500"
                     : "border-slate-700"
-                } w-full h-52 p-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal resize-none`}
+                } w-full h-52 p-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal resize-none focus:border-secondary`}
               ></textarea>
               <button
                 disabled={btnDisabled}
