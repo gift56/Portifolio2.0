@@ -96,7 +96,7 @@ const Projects = () => {
               {data.map((item) => (
                 <SwiperSlide
                   key={item.desc}
-                  className="w-full p-6 flex flex-col items-start justify-start bg-[#31313F] rounded-xl shadow-cardShad !h-[450px] mb-10"
+                  className="w-full p-6 flex flex-col items-start justify-start bg-slate-700 rounded-xl shadow-cardShad !h-[450px] mb-10"
                 >
                   <img
                     src={item.image}
