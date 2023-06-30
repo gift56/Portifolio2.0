@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import Link from "next/link";
 
 const Projects = () => {
-  const [screen, setScreen] = useState<HTMLDivElement | any>(null);
+  const [screen, setScreen] = useState<number | any>(null);
 
   useEffect(() => {
     const handleResize = () => {
