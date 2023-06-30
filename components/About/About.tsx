@@ -9,7 +9,7 @@ const About = () => {
       icon: TfiRulerPencil,
       title: (
         <span>
-          UI & UX <br /> DESIGNING
+          UI & UX <br /> Development
         </span>
       ),
     },
@@ -42,7 +42,7 @@ const About = () => {
     },
   ];
   return (
-    <section className="py-10 w-full">
+    <section id="about" className="py-10 w-full">
       <div className="container">
         <div className="flex flex-col items-start justify-start w-full gap-3">
           <h2 className="text-2xl md:text-3xl font-semibold text-blue-500">
@@ -74,9 +74,7 @@ const About = () => {
                 <span>
                   <item.icon size={40} />
                 </span>
-                <h2 className="font-semibold text-2xl">
-                  {item.title}
-                </h2>
+                <h2 className="font-semibold text-2xl">{item.title}</h2>
               </div>
             ))}
           </div>
