@@ -57,6 +57,13 @@ const Contact = () => {
 
   const [state, submitForm = handleSubmit] = useForm("xaygwalq");
 
+  if (state.succeeded) {
+    toast.success("Thank you for getting in touch!", {
+      toastId: 1,
+      autoClose: 1500,
+    });
+  }
+
   return (
     <section id="contact" className="py-10 w-full">
       <div className="container">
@@ -86,7 +93,10 @@ const Contact = () => {
           </div>
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
             <h2 className="text-2xl font-semibold">Send me a message</h2>
-            <form onSubmit={handleSubmit} className="w-full flex flex-col items-start">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full flex flex-col items-start"
+            >
               <input type="text" />
             </form>
           </div>
