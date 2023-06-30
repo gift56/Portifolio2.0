@@ -5,8 +5,22 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  @apply scroll-smooth;
 }
 
 body {
   @apply bg-bodyBg text-white;
+}
+.container {
+  @apply w-[90%] mx-auto lg:w-[85%];
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-bodyBg rounded-xl;
+}
+::-webkit-scrollbar-track {
+  background-color: #182634;
 }
