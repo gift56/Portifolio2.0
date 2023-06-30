@@ -6,3 +6,7 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  @apply bg-bodyBg text-white;
+}
