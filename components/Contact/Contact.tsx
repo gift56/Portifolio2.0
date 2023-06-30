@@ -45,7 +45,10 @@ const Contact = () => {
               ))}
             </div>
           </div>
-          <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4"></div>
+          <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
+            <h2 className="text-2xl font-semibold">Send me a message</h2>
+            
+          </div>
         </div>
       </div>
     </section>
