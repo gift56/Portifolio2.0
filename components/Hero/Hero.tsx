@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -9,10 +10,16 @@ const Hero = () => {
       <div className="container h-full">
         <div className="w-full flex flex-col items-center justify-center tab:flex-row gap-10 h-full">
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
-            <h1 className="text-2xl font-semibold md:text-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 1 }}
+              className="text-2xl font-semibold md:text-3xl"
+            >
               Hello, my name is{" "}
               <i className="font-styleFont text-secondary">Efe Asieghwu Gift</i>
-            </h1>
+            </motion.h1>
             <TypeAnimation
               sequence={[
                 "I'm a Software Engineer",
