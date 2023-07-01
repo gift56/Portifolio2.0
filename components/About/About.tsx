@@ -69,7 +69,7 @@ const About = () => {
             {data.map((item, i) => (
               <div
                 key={i}
-                className="w-full h-[254px] bg-slate-700 transition-all duration-300 hover:bg-secondary rounded flex flex-col items-start justify-end gap-4 p-4"
+                className="w-full h-[254px] bg-primary transition-all duration-300 hover:bg-secondary rounded flex flex-col items-start justify-end gap-4 p-4"
               >
                 <span>
                   <item.icon size={40} />
