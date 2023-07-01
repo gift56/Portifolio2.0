@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const data = [
@@ -73,9 +74,15 @@ const Projects = () => {
     <section id="projects" className="py-10 w-full">
       <div className="container">
         <div className="flex flex-col items-start justify-start w-full gap-3">
-          <h2 className="text-2xl md:text-3xl font-semibold text-blue-500">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", duration: 1 }}
+            className="text-2xl md:text-3xl font-semibold text-blue-500"
+          >
             Featured projects
-          </h2>
+          </motion.h2>
           <p className="text-sm md:text-base font-medium">
             I have worked on many projects over the course of being a Web
             Developer, here are a few of my live, real-world projects
