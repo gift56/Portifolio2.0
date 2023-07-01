@@ -119,8 +119,8 @@ const Contact = () => {
                 className={`${
                   errors.Name && touched.Name
                     ? "border-red-500"
-                    : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+                    : "border-primary"
+                } w-full h-12 px-5 rounded-xl border outline-none bg-primary text-white placeholder:text-white text-sm md:text-base font-normal`}
               />
               <input
                 type="text"
@@ -132,8 +132,8 @@ const Contact = () => {
                 className={`${
                   errors.Email && touched.Email
                     ? "border-red-500"
-                    : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+                    : "border-primary"
+                } w-full h-12 px-5 rounded-xl border outline-none bg-primary text-white placeholder:text-white text-sm md:text-base font-normal`}
               />
               <input
                 type="text"
@@ -145,8 +145,8 @@ const Contact = () => {
                 className={`${
                   errors.Subject && touched.Subject
                     ? "border-red-500"
-                    : "border-slate-700"
-                } w-full h-12 px-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal`}
+                    : "border-primary"
+                } w-full h-12 px-5 rounded-xl border outline-none bg-primary text-white placeholder:text-white text-sm md:text-base font-normal`}
               />
               <textarea
                 name="Message"
@@ -158,8 +158,8 @@ const Contact = () => {
                 className={`${
                   errors.Subject && touched.Subject
                     ? "border-red-500"
-                    : "border-slate-700"
-                } w-full h-52 p-5 rounded-xl border outline-none bg-slate-700 text-white placeholder:text-white text-sm md:text-base font-normal resize-none`}
+                    : "border-primary"
+                } w-full h-52 p-5 rounded-xl border outline-none bg-primary text-white placeholder:text-white text-sm md:text-base font-normal resize-none`}
               ></textarea>
               <button
                 disabled={btnDisabled}
