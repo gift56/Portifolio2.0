@@ -67,7 +67,7 @@ const Footer = () => {
               </ScrollLink>
             ))}
           </div>
-          <div className="mt-9 w-full flex items-center justify-between border-t pt-4 flex-wrap lg:flex-nowrap">
+          <div className="mt-9 w-full flex items-center justify-center gap-5 md:justify-between border-t pt-4 flex-wrap lg:flex-nowrap">
             <div className="flex items-center justify-start gap-4 flex-wrap lg:flex-none">
               {Icons.map((item, i) => (
                 <Link
