@@ -83,10 +83,16 @@ const Projects = () => {
           >
             Featured projects
           </motion.h2>
-          <p className="text-sm md:text-base font-medium">
+          <motion.p
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", duration: 1 }}
+            className="text-sm md:text-base font-medium"
+          >
             I have worked on many projects over the course of being a Web
             Developer, here are a few of my live, real-world projects
-          </p>
+          </motion.p>
           <div className="w-full mt-5">
             <Swiper
               slidesPerView={screen}
