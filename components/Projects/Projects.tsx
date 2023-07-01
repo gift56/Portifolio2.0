@@ -96,7 +96,7 @@ const Projects = () => {
               {data.map((item) => (
                 <SwiperSlide
                   key={item.desc}
-                  className="w-full p-6 flex flex-col items-start justify-start bg-primary rounded-xl shadow-cardShad !h-[450px] mb-10"
+                  className="w-full p-6 flex flex-col items-start justify-start bg-primary rounded-xl shadow-cardShad md:!h-[450px] mb-10"
                 >
                   <img
                     src={item.image}
@@ -110,12 +110,12 @@ const Projects = () => {
                     <p className="text-sm font-medium md:text-base">
                       {item.desc}
                     </p>
-                    <div className="flex items-center justify-center gap-4 w-full">
+                    <div className="flex items-center flex-col md:flex-row justify-center gap-4 w-full">
                       <Link
                         href={item.liveUrl}
                         target="_blank"
                         rel="noreferrer noopener"
-                        className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-fit bg-secondary py-2 px-8 rounded-lg transition-all duration-300"
+                        className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-full md:w-fit bg-secondary py-2 px-8 rounded-lg transition-all duration-300"
                       >
                         View Live
                       </Link>
@@ -123,7 +123,7 @@ const Projects = () => {
                         href={item.repo}
                         target="_blank"
                         rel="noreferrer noopener"
-                        className="text-base font-normal text-white cursor-pointer hover:bg-secondary border-secondary border flex items-center justify-center gap-3 w-[50%] bg-transparent py-2 px-4 rounded-lg transition-all duration-300"
+                        className="text-base font-normal text-white cursor-pointer hover:bg-secondary border-secondary border flex items-center justify-center gap-3 w-full md:w-[50%] bg-transparent py-2 px-4 rounded-lg transition-all duration-300"
                       >
                         Github Repo
                       </Link>

@@ -37,7 +37,7 @@ const Hero = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-fit bg-secondary py-2 px-8 rounded-lg transition-all duration-300"
+                className="text-base font-normal text-white cursor-pointer hover:bg-transparent border-secondary border flex items-center justify-center gap-3 w-fit bg-secondary py-2 px-5 rounded-lg transition-all duration-300"
               >
                 Projects
               </ScrollLink>
@@ -46,7 +46,7 @@ const Hero = () => {
                 download
                 target="_blank"
                 rel="noreferrer noopener"
-                className="text-base font-normal text-white cursor-pointer hover:bg-secondary border-secondary border flex items-center justify-center gap-3 w-fit bg-transparent py-2 px-8 rounded-lg transition-all duration-300"
+                className="text-base font-normal text-white cursor-pointer hover:bg-secondary border-secondary border flex items-center justify-center gap-3 w-fit bg-transparent py-2 px-5 rounded-lg transition-all duration-300"
               >
                 Download CV
               </Link>
