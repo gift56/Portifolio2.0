@@ -115,9 +115,16 @@ const About = () => {
               experience.
             </motion.span>
           </div>
-          <div className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          >
             {data.map((item, i) => (
-              <div
+              <motion.div
+                variants={itemdisplay}
                 key={i}
                 className="w-full h-[254px] bg-primary transition-all duration-300 hover:bg-secondary rounded flex flex-col items-start justify-end gap-4 p-4"
               >
@@ -125,9 +132,9 @@ const About = () => {
                   <item.icon size={40} />
                 </span>
                 <h2 className="font-semibold text-2xl">{item.title}</h2>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
