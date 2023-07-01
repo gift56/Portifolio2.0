@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import { toast } from "react-toastify";
 import { useForm } from "@formspree/react";
 import { contactSchema } from "@/schema";
+import { motion } from "framer-motion";
 
 interface FormValues {
   Name: string;
