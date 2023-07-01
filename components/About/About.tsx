@@ -2,6 +2,7 @@ import React from "react";
 import { FaReact, FaLaptopCode } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { TfiRulerPencil } from "react-icons/tfi";
+import { motion } from "framer-motion";
 
 const About = () => {
   const data = [

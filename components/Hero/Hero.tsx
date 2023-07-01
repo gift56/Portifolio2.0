@@ -35,11 +35,23 @@ const Hero = () => {
               className="text-2xl font-semibold md:text-3xl"
               repeat={Infinity}
             />
-            <span className="text-base md:text-lg font-medium">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 3 }}
+              className="text-base md:text-lg font-medium"
+            >
               Freelance Software Engineer, Fullstack developer, & Data Miner. I
               create seamless web experiences the meets client expectation.
-            </span>
-            <div className="flex items-center justify-start gap-5">
+            </motion.span>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", duration: 2 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-start gap-5"
+            >
               <ScrollLink
                 to="projects"
                 spy={true}
@@ -57,11 +69,14 @@ const Hero = () => {
               >
                 Download CV
               </Link>
-            </div>
+            </motion.div>
           </div>
           <div className="tab:flex-1 w-full relative flex items-center justify-center h-full md:overflow-hidden">
             <div className="w-full bg-secondary md:absolute h-[416px] rounded-full flex items-center justify-center overflow-hidden">
-              <img
+              <motion.img
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ type: "spring", duration: 2 }}
                 src="/img/heroImg.png"
                 alt="hero_image"
                 className="w-[418px] h-[416px] rounded-lg relative z-10 object-contain"
