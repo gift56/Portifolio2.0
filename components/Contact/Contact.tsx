@@ -77,6 +77,30 @@ const Contact = () => {
     !MessageValuesCheck ||
     isSubmitting;
 
+  const container = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.4,
+        duration: 0.3,
+        type: "spring",
+      },
+    },
+  };
+
+  const itemdisplay = {
+    hidden: { y: 60, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      duration: 2,
+      type: "spring",
+    },
+  };
+
   return (
     <section id="contact" className="py-10 w-full">
       <div className="container">
@@ -91,12 +115,24 @@ const Contact = () => {
             >
               Get in touch
             </motion.h2>
-            <p className="text-sm md:text-base font-normal">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", duration: 4 }}
+              className="text-sm md:text-base font-normal"
+            >
               I’m very approachable and would love to speak to you. Feel free to
               call, send me an email . Follow me in social media or simply
               complete the enquiry form.
-            </p>
-            <div className="flex items-center justify-start gap-4 flex-wrap lg:flex-none">
+            </motion.p>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="flex items-center justify-start gap-4 flex-wrap lg:flex-none"
+            >
               {Icons.map((item, i) => (
                 <Link
                   href={item.href}
@@ -105,14 +141,19 @@ const Contact = () => {
                   rel="noreferrer noopener"
                   className="w-12 h-12 flex items-center justify-center bg-[#ffffff1a] rounded-md backdrop-blur-sm border border-[#ffffff1a] hover:bg-secondary hover:text-white hover:origin-bottom transition-all duration-300"
                 >
-                  <item.icon size={20} className="hover:text-white" />
+                  <motion.span variants={itemdisplay}>
+                    <item.icon size={20} className="hover:text-white" />
+                  </motion.span>
                 </Link>
               ))}
-            </div>
+            </motion.div>
           </div>
           <div className="tab:flex-1 w-full flex flex-col items-start justify-start gap-4">
             <h2 className="text-2xl font-semibold">Send me a message</h2>
-            <form
+            <motion.form
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", duration: 2 }}
               onSubmit={handleSubmit}
               className="w-full flex flex-col items-start gap-4"
             >
@@ -176,7 +217,7 @@ const Contact = () => {
                 <span>Send Message</span>
                 <BsSend />
               </button>
-            </form>
+            </motion.form>
           </div>
         </div>
       </div>

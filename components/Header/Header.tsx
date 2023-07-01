@@ -28,7 +28,7 @@ const Header = () => {
         to="home"
         spy={true}
         smooth={true}
-        className="text-base font-normal text-white cursor-pointer hover:text-blue-500 hidden md:flex"
+        className="text-base font-normal text-white cursor-pointer hover:text-secondary hidden md:flex"
       >
         Home
       </ScrollLink>
@@ -36,16 +36,16 @@ const Header = () => {
         to="about"
         spy={true}
         smooth={true}
-        className="text-base font-normal text-white cursor-pointer hover:text-blue-500 hidden md:flex"
+        className="text-base font-normal text-white cursor-pointer hover:text-secondary hidden md:flex"
       >
         About Me
       </ScrollLink>
-      <div className="border border-blue-500 w-10 h-10 font-styleFont text-4xl items-center justify-center rounded-full select-none font-semibold hidden md:flex">
+      <div className="border-2 border-blue-500 w-10 h-10 font-styleFont text-[38px] items-center justify-center rounded-full select-none font-semibold hidden md:flex">
         E
       </div>
       <div
         onClick={() => setMobileNav(true)}
-        className="border border-blue-500 w-10 h-10 font-styleFont text-4xl flex items-center justify-center rounded-full select-none font-semibold md:hidden"
+        className="border-2 border-blue-500 w-10 h-10 font-styleFont text-[38px] flex items-center justify-center rounded-full select-none font-semibold md:hidden"
       >
         E
       </div>
@@ -53,7 +53,7 @@ const Header = () => {
         to="projects"
         spy={true}
         smooth={true}
-        className="text-base font-normal text-white cursor-pointer hover:text-blue-500 hidden md:flex"
+        className="text-base font-normal text-white cursor-pointer hover:text-secondary hidden md:flex"
       >
         Projects
       </ScrollLink>
@@ -61,7 +61,7 @@ const Header = () => {
         to="contact"
         spy={true}
         smooth={true}
-        className="text-base font-normal text-white cursor-pointer hover:text-blue-500 hidden md:flex"
+        className="text-base font-normal text-white cursor-pointer hover:text-secondary hidden md:flex"
       >
         Contact
       </ScrollLink>
@@ -85,7 +85,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               onClick={() => setMobileNav(false)}
-              className="text-base font-normal text-white cursor-pointer hover:text-blue-500"
+              className="text-base font-normal text-white cursor-pointer hover:text-secondary"
             >
               Home
             </ScrollLink>
@@ -94,7 +94,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               onClick={() => setMobileNav(false)}
-              className="text-base font-normal text-white cursor-pointer hover:text-blue-500"
+              className="text-base font-normal text-white cursor-pointer hover:text-secondary"
             >
               About Me
             </ScrollLink>
@@ -103,7 +103,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               onClick={() => setMobileNav(false)}
-              className="text-base font-normal text-white cursor-pointer hover:text-blue-500"
+              className="text-base font-normal text-white cursor-pointer hover:text-secondary"
             >
               Projects
             </ScrollLink>
@@ -112,7 +112,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               onClick={() => setMobileNav(false)}
-              className="text-base font-normal text-white cursor-pointer hover:text-blue-500"
+              className="text-base font-normal text-white cursor-pointer hover:text-secondary"
             >
               Contact
             </ScrollLink>
