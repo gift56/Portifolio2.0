@@ -72,7 +72,7 @@ const Header = () => {
       >
         <div
           ref={modalRef}
-          className={`flex flex-col h-full bg-bodyBg/50 gap-7 absolute top-0 p-4 w-[250px]`}
+          className={`flex flex-col h-full bg-primary gap-7 absolute top-0 p-4 w-[250px]`}
         >
           <div className="w-full flex items-center justify-end">
             <span className="text-dark" onClick={() => setMobileNav(false)}>
