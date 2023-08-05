@@ -43,7 +43,7 @@ const Hero = () => {
               className="text-base md:text-lg font-medium"
             >
               Freelance Software Engineer, Fullstack developer, & Data Miner. I
-              create seamless web experiences the meets client expectation.
+              create seamless web experiences that meets client expectation.
             </motion.span>
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
