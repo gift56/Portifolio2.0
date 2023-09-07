@@ -87,7 +87,7 @@ const About = () => {
             transition={{ type: "spring", duration: 4 }}
             className="text-sm md:text-base font-medium"
           >
-            Hi, my name is Efe Asieghwu Gift, i am a Frontend web developer,
+            Hi, my name is Efe Asieghwu Gift, i am a Fullstack web developer,
             React developer, and a Tech influencer. I have honed my skills in
             Web Development and advance i have core understanding of advance UI
             design principles. Here are the major skills i do dominate.
