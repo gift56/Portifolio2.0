@@ -62,7 +62,7 @@ const Projects = () => {
               }}
               modules={[Autoplay, Pagination]}
             >
-              {projectData.slice(0, 6).map((item) => (
+              {projectData.map((item) => (
                 <SwiperSlide
                   key={item.desc}
                   className="w-full p-6 flex flex-col items-start justify-start bg-primary rounded-xl shadow-cardShad md:!h-[450px] mb-10"

@@ -36,9 +36,16 @@ export const projectData = [
   },
   {
     image: "/img/image6.png",
-    title: "MovieWorld",
+    title: "Colhacklabs",
     desc: "A website that promotes Grow with Innovative Product Development, High-End Web Design, and Effective Branding.",
     liveUrl: "https://colhacklab.com/",
     repo: "https://colhacklab.com/",
+  },
+  {
+    image: "/img/image7.png",
+    title: "Akada",
+    desc: "Streamline teaching, engage students, and boost outcomes with our user-friendly, all-in-one digital learning solution.",
+    liveUrl: "https://akada.colhacklab.com/",
+    repo: "https://akada.colhacklab.com/",
   },
 ];
