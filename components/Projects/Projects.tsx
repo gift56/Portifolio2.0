@@ -48,8 +48,8 @@ const Projects = () => {
       image: "/img/image6.png",
       title: "MovieWorld",
       desc: "A website that promotes Grow with Innovative Product Development, High-End Web Design, and Effective Branding.",
-      liveUrl: "https://colhacklabs.com/",
-      repo: "https://colhacklabs.com/",
+      liveUrl: "https://colhacklab.com/",
+      repo: "https://colhacklab.com/",
     },
   ];
 
